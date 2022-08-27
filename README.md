@@ -3,8 +3,6 @@ Max Sum of Rectangle No Larger Than K.cpp
 
 class Solution {
 public:
-    
-
     int maxSumSubmatrix(vector<vector<int>>& m, int k) {
     int res = INT_MIN, rows = m.size(), cols = m[0].size();
     for (int l = 0; l < cols; ++l) {
