@@ -13,10 +13,7 @@ public:
                     answer.push_back(right);
                 }
             }
-        }
-        
-
-        
+        }   
         return answer;
     }
 };
