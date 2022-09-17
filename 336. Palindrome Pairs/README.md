@@ -33,7 +33,4 @@ Constraints:
 1 <= words.length <= 5000
 0 <= words[i].length <= 300
 words[i] consists of lower-case English letters.
-Accepted
-180,065
-Submissions
-509,468
+
