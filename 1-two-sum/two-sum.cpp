@@ -4,7 +4,7 @@ public:
         
         vector<int> answer;
         
-        for(int left = 0; left < nums.size(); left++){
+        for(int left = 0 ; left < nums.size(); left++){
             
             for(int right = left + 1; right < nums.size(); right++){
                 
