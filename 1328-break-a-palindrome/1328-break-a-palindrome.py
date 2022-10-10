@@ -12,8 +12,7 @@ class Solution:
                 x[i]='a'
                 if x!=x[::-1]:
                     return "".join(x)
-                #x[i]=c
-        x=list(palindrome)
+                x[i]=c
         if flag==0:
             x[-1]='b'
             return "".join(x)
