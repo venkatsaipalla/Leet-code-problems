@@ -11,6 +11,7 @@ public:
                 if(nums[left] + nums[right] == target) {
                    answer.push_back(left);
                    answer.push_back(right);
+                    
                 }
             }
         }   
