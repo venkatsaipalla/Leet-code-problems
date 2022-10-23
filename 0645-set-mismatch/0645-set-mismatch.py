@@ -2,11 +2,10 @@ class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
         d={}
         dup=0
-        length=len(nums)
-        l=list(range(1,length+1))
-        tot=sum(l)
+        l=len(nums)
+        tot=l*(l+1)//2
         s=sum(nums)
-        for i in range(length):
+        for i in range(l):
             if nums[i] in d:
                 dup=nums[i]
                 break
