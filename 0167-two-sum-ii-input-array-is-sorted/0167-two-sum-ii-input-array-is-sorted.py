@@ -3,9 +3,10 @@ class Solution:
         left=0
         right=len(numbers)-1
         while left<right:
-            if numbers[left]+numbers[right]<target:
+            sum=numbers[left]+numbers[right]
+            if sum<target:
                 left=left+1
-            elif numbers[left]+numbers[right]>target:
+            elif sum>target:
                 right=right-1
             else:
                 return [left+1,right+1]
