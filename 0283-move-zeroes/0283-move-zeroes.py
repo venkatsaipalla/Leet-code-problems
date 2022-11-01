@@ -3,6 +3,12 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        index = 0
+        for i in range(0,len(nums)):
+            if nums[i] != 0:
+                nums[index] , nums[i] = nums[i],nums[index]
+                index += 1 
+        """
         count=0
         k=[]
         k[:]=nums
@@ -13,5 +19,6 @@ class Solution:
                 k.remove(0)     
         l=[0]*count
         nums[:]=k+l
+        """
             
         
