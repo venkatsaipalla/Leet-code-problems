@@ -10,8 +10,7 @@ class Solution:
             print(i)
             if i==0:
                 count=count+1
-                k.remove(0)
-        print("k =",k,"Count = ",count)        
+                k.remove(0)     
         l=[0]*count
         nums[:]=k+l
             
