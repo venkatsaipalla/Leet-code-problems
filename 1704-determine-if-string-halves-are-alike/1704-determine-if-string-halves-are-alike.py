@@ -2,7 +2,8 @@ class Solution:
     def halvesAreAlike(self, s: str) -> bool:
         i=0
         j=len(s)-1
-        volwes=['a','A','e','E','i','I','o','O','u','U']
+        s=s.lower()
+        volwes=['a','e','i','o','u']
         left=0
         right=0
         while i<j:
