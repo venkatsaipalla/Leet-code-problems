@@ -14,7 +14,7 @@ class Solution:
             else: return i"""
         right_sum = sum(nums)
         left_sum=0
-        for i in range(0,n):
+        for i in range(n):
             if i==n-1:
                 right=0
             else:
