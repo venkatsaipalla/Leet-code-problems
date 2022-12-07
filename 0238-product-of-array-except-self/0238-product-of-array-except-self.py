@@ -10,14 +10,15 @@ class Solution:
             else:
                 totalProduct*=i
                 totalNonZeroProduct*=i
-        answer=[]
+        lenght=len(nums)        
+        answer=[1]*lenght
         if zeroCount>1:
-            return [0]*len(nums)
-        for i in nums:
-            if i==0:
-                answer.append(totalNonZeroProduct)
+            return [0]*lenght
+        for i in range(lenght):
+            if nums[i]==0:
+                answer[i]=totalNonZeroProduct
             else:
-                answer.append(totalProduct//i)
+                answer[i]=totalProduct//nums[i]
         return answer        
             
         
