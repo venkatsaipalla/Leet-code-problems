@@ -20,7 +20,7 @@ class Solution:
                 rank[p2]+=rank[p1]
             else:
                 par[p2]=p1
-                rank[p1]=p2
+                rank[p1]+=p2
             return 1
         res=l
         for i in range(l):
