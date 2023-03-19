@@ -5,3 +5,4 @@ class Solution(object):
         for num in nums:
             result += [i + [num] for i in result]
         return result
+    #h
