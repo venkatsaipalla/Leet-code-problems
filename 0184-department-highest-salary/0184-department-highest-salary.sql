@@ -8,5 +8,3 @@ RANK() over(partition by d.name order by e.salary DESC) as s_rank
 from Employee as e  join Department as d on e.departmentId=d.id
 )as t
 where t.s_rank=1
-    
-# having 
