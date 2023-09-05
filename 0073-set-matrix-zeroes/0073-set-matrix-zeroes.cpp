@@ -1,38 +1,41 @@
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
-        vector<vector<int>>temp;
-        temp=matrix;
         int m=matrix.size();
         int n=matrix[0].size();
-        cout<<m<<n<<endl;
+        int col0=1;
         for(int i=0;i<m;++i){
             for(int j=0;j<n;++j){
-                if(temp[i][j]==0){
-                    int row=i;
-                    int col=j;
-                    while(row>=0){
-                        matrix[row][j]=0;
-                        row--;
-                    }
-                    row=i;
-                    while(row<m){
-                        matrix[row][j]=0;
-                        row++;
-                    }
-                    while(col>=0){
-                        matrix[i][col]=0;
-                        col--;
-                    }
-                    col=j;
-                    while(col<n){
-                        matrix[i][col]=0;
-                        col++;
-                    }
-                    
+                if(matrix[i][j]==0){
+                    //making row's first element as 0
+                    matrix[i][0]=0;
+                    //making col's first element as 0
+                    if(j!=0)
+                        matrix[0][j]=0;
+                     else
+                         col0=0;                  
                 }
             }
         }
         
-    }
-};
+        for(int i=1;i<m;++i){
+            for(int j=1;j<n;++j){
+                if(matrix[i][j]!=0){
+                    if(matrix[i][0]==0 or matrix[0][j]==0)
+                        matrix[i][j]=0;
+                }
+            }
+        }
+        
+        if(matrix[0][0]==0){
+            for(int j=1;j<n;j++){
+                matrix[0][j]=0;
+            }
+        }
+        if(col0==0){
+             for(int i=0;i<m;i++){
+                matrix[i][0]=0;
+            }
+        }
+        
+}};
