@@ -8,12 +8,14 @@ public:
         
     void sortColors(vector<int>& nums) {
        
-        for(int i=0;i<nums.size()-1;++i){
-            for(int j=0;j<nums.size()-i-1;++j){
-                if(nums[j]>nums[j+1]){
-                    swap(nums[j],nums[j+1]);
-                }
+        for(int i=1;i<nums.size();++i){
+            int j=i-1;
+            int key=nums[i];
+            while(j>=0 and nums[j]>key){
+                nums[j+1]=nums[j];
+                j--;
             }
+            nums[j+1]=key;
         }
     }
 };
