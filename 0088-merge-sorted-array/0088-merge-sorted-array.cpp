@@ -14,9 +14,6 @@ public:
             }
         }
         sort(nums1.begin(),nums1.begin()+m);
-        for(int k=0;k<nums1.size();k++){
-            cout<<nums1[k];
-        }
         sort(nums2.begin(),nums2.end());
         for(int j=0;j<n;j++){
             nums1[j+m]=nums2[j];
