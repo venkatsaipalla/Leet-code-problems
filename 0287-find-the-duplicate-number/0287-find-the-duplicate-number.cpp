@@ -1,9 +1,15 @@
-class Solution:
-    def findDuplicate(self, nums: List[int]) -> int:
-        leng=len(nums)
-        arr=[0]*leng
-        for i in nums:
-            arr[i]+=1
-            if(arr[i]>1):
-                return i
-            
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int len=nums.size();
+        // int[] l= new int[len+1];
+    vector<int> l(len);
+        for(int i=0;i<len;++i){
+           l[nums[i]]++;
+            if(l[nums[i]]>1){
+                return nums[i];
+            }
+        }
+        return len;
+    }
+};
