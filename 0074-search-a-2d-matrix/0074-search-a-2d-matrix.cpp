@@ -1,22 +1,21 @@
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        int i=matrix.size()-1;
-        int j=0;
-        int n=matrix[0].size();
-        // cout<<i<<n;
-        while(i>=0 and j<n){
-            cout<<i<<" "<<j<<endl;
-            if(matrix[i][j]==target){
+        int m=matrix[0].size();
+        int n=matrix.size();
+        int right=m*n-1;
+        int left=0;
+        while (left<=right){
+            int mid=left+(right-left)/2;
+            int row=mid/m;
+            int col=mid%m;
+            if(matrix[row][col]==target)
                 return true;
+            else if(matrix[row][col]<target){
+                left=mid+1;
             }
             else{
-                if(matrix[i][j]<target){
-                j++;
-            }
-            else{
-                i--;
-            }
+                right=mid-1;
             }
         }
         return false; 
