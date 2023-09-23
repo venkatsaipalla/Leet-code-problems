@@ -1,16 +1,24 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int /x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        ListNode *slow=head;
+        ListNode *fast=head;
+        while(fast and fast->next){
+            fast=fast->next->next;
+            slow=slow->next;
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
 
-class Solution:
-    def hasCycle(self, head: Optional[ListNode]) -> bool:
-        d={}
-        while(head):
-            if head not in d:
-                d[head]=1;
-            else:
-                return True
-            head=head.next
-        return False    
+}
+};
